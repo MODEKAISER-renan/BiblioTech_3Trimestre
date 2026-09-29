@@ -2,7 +2,7 @@
  * Disciplina: 2026-PS
  * Projeto   : bibliotech
  * Arquivo   : Main.java
- * Autor     : seu nome
+ * Autor     : Renan Soares da Silva
  * Descricao : esqueleto do BiblioTech (Aula 36). Ainda nao faz nada:
  *             so prova que o ambiente compila e roda.
  */
