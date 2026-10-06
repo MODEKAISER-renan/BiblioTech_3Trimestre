@@ -13,11 +13,11 @@ public class Biblioteca {
         this.emprestimos = new ArrayList<Emprestimo>();
     }
 
-    public void cadrastrarLivro(Livro livro){
+    public void cadastrarLivro(Livro livro){
         livros.add(livro);
     }
 
-    public void cadrastrarLeitor(Leitor leitor){
+    public void cadastrarLeitor(Leitor leitor){
         leitores.add(leitor);
     }
 
@@ -25,6 +25,18 @@ public class Biblioteca {
         for(int i = 0; i<livros.size();i++){
             System.out.println(livros.get(i));
         }
+    }
+
+    public String obterAcervoComoTexto() {
+        if (livros.isEmpty()) {
+            return "Nenhum livro cadastrado.";
+        }
+
+        String texto = "";
+        for (int i = 0; i < livros.size(); i++) {
+            texto = texto + livros.get(i) + "\n";
+        }
+        return texto;
     }
 
     public Livro buscarLivro(String titulo){
