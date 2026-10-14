@@ -62,12 +62,15 @@ public class Biblioteca {
     public boolean emprestar(String titulo, String matricula){
         Livro livro = buscarLivro(titulo);
         Leitor leitor = buscarLeitor(matricula);
+
         if (livro == null || leitor == null){
             return false;
         }
-
+        
         Emprestimo novo = new Emprestimo(livro,leitor);
-
+        if (!novo.realizarEmprestimo()){
+            return false;
+        }
         emprestimos.add(novo);
         return true;
     }
