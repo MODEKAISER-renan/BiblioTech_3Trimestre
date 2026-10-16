@@ -45,3 +45,34 @@ O cliente é os alunos e professores que precisam usar o sistema para emprestar 
 ### Classes
 ​
 ![Diagrama de classes do BiblioTech](Arquivos.svg/bibliotech-classes.svg)
+
+## 6. Como Executar
+
+no Codespace, dentro da pasta `bibliotech`:
+
+'''
+javac *.java
+java TesteRequisitos
+java TelaBiblioteca
+'''
+
+
+`TesteRequisitos` confere os requisitos no terminal. `TelaBiblioteca` abre a janela na área de trabalho do Codespace (porta 6080).
+
+## 7. Requisitos e verificações
+
+| # | Onde está no código | Como verifico |
+|---|---|---|
+| RF01 | `Biblioteca.cadastrarLivro()` | TesteRequisitos: 1 verificação RF01 |
+| RF02 | `Biblioteca.cadastrarLeitor()` | TesteRequisitos: 1 verificação RF02 |
+| RF03 | `Biblioteca.buscarLivro()` e `Livro.estaDisponivel()` | área do acervo na janela \| TesteRequisitos: 2 verificações RF03 |
+| RF04 | `Biblioteca.devolver()`, que chama `Emprestimo.registrarDevolucao()` | botão Devolver \| TesteRequisitos: 3 verificações RF04 |
+| RF05 | `Biblioteca.emprestar()`, que chama `Emprestimo.realizarEmprestimo()` | botão Emprestar \| TesteRequisitos: 5 verificações RF05 |
+| RF06 | (o seu RF: onde está, ou "ainda não implementado") | (a verificação, ou "sem verificação") |
+
+## 8. O que o BiblioTech ainda não faz
+
+- HUBS: ver os empréstimos atrasados. O empréstimo ainda não tem prazo.
+- RNF02: qualquer pessoa que abre a janela pode emprestar e devolver; não há login de bibliotecário.
+- Cadastrar livro e leitor pela janela: hoje o cadastro está no `main` de `TelaBiblioteca`.
+- Guardar os dados: ao fechar o programa, os empréstimos se perdem.

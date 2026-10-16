@@ -41,7 +41,11 @@ public class TesteRequisitos {
 
         verificar("RF05 leitor no limite é recusado",!biblioteca.emprestar("Capitães da Areia", "20260010"));
 
-        verificar("RF04 devolução de emprestimo ativo e aceita", );
+        verificar("RF04 devolução de emprestimo ativo e aceita", biblioteca.devolver("Dom Casmurro"));
+
+        verificar("RF04 livro devolvido volta a ficar disponivel", dom.estaDisponivel());
+
+        verificar("RF04 segunda devolucao recusada", !biblioteca.devolver("Dom Casmurro"));
 
         System.out.println();
         System.out.println(passaram + " passaram, " + falharam + " falharam.");
