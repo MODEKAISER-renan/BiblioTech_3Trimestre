@@ -7,12 +7,14 @@
 */
 
 public class Livro{
+    private int id;
     private String titulo;
     private String autor;
     private int ano;
     private boolean disponivel;
 
-    public Livro(String titulo, String autor, int ano){
+    public Livro(int id,String titulo, String autor, int ano){
+        this.id = id;
         this.titulo = titulo;
         this.autor  = autor;
         this.ano = ano;
@@ -28,6 +30,14 @@ public class Livro{
     public int getAno(){
         return ano;
     }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public boolean estaDisponivel(){
         return disponivel;
     }
